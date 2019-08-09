@@ -38,16 +38,22 @@ class ProcessImageData:
         image    = self.image.resize((size, h_size), Image.ANTIALIAS)
         return image
 
-    # makes line thicker
-    def erosion(self, x=1, y=1, iterations=1):
+    # makes line thinner
+    def erosion(self, x=2, y=2, iterations=1, suppress_scaling=False):
+        if not suppress_scaling:
+            x = x * self.width / 200
+            y = y * self.height / 100
         image  = cv2.cvtColor(np.array(self.image), cv2.COLOR_RGB2BGR)
         kernel = np.ones((x, y), np.uint8)
         image  = cv2.erode(image, kernel, iterations=iterations)
         image  = Image.fromarray(image)
         return image
 
-    # makes line thinner
-    def dilation(self, x=1, y=1, iterations=1):
+    # makes line thicker
+    def dilation(self, x=2, y=2, iterations=1, suppress_scaling=False):
+        if not suppress_scaling:
+            x = x * self.width / 200
+            y = y * self.height / 100
         image  = cv2.cvtColor(np.array(self.image), cv2.COLOR_RGB2BGR)
         kernel = np.ones((x, y), np.uint8)
         image  = cv2.dilate(image, kernel, iterations=iterations)
