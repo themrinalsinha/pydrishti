@@ -1,3 +1,6 @@
+import cv2
+import numpy as np
+
 from PIL import ImageDraw, Image
 
 class ProcessImageData:
@@ -33,4 +36,20 @@ class ProcessImageData:
         wpercent = (size / float(self.image.size[0]))
         h_size   = int((float(self.image.size[1])*float(wpercent)))
         image    = self.image.resize((size, h_size), Image.ANTIALIAS)
+        return image
+
+    # makes line thicker
+    def erosion(self, x=1, y=1, iterations=1):
+        image  = cv2.cvtColor(np.array(self.image), cv2.COLOR_RGB2BGR)
+        kernel = np.ones((x, y), np.uint8)
+        image  = cv2.erode(image, kernel, iterations=iterations)
+        image  = Image.fromarray(image)
+        return image
+
+    # makes line thinner
+    def dilation(self, x=1, y=1, iterations=1):
+        image  = cv2.cvtColor(np.array(self.image), cv2.COLOR_RGB2BGR)
+        kernel = np.ones((x, y), np.uint8)
+        image  = cv2.dilate(image, kernel, iterations=iterations)
+        image  = Image.fromarray(image)
         return image
