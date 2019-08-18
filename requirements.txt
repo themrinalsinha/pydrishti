@@ -1,7 +1,8 @@
+dlib
 pyocr
 numpy
 Pillow
 imutils
 ipython
 matplotlib
-opencv-python
+opencv-contrib-python
