@@ -4,7 +4,7 @@ setup(
     url              = 'https://github.com/TheMrinalSinha/drishti',
     name             = 'pydrishti',
     author           = 'Mrinal Sinha',
-    version          = '0.1-alpha',
+    version          = '0.0.1',
     zip_safe         = False,
     liscense         = 'MIT',
     packages         = ['pydrishti'],
