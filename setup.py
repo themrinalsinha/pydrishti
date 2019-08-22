@@ -12,7 +12,7 @@ setup(
     classifiers      = [
         "Programming Language :: Python :: 3",
         "Operating System :: Linux (Ubuntu)",
-    ]
+    ],
     long_description = open('README.md').read(),
     long_description_content_type = "text/markdown",
 )
