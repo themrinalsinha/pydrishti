@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     url              = 'https://github.com/TheMrinalSinha/drishti',
-    name             = 'drishti',
+    name             = 'pydrishti',
     author           = 'Mrinal Sinha',
     version          = '0.1-alpha',
     zip_safe         = False,
