@@ -10,8 +10,7 @@ setup(
     author_email     = 'mail@themrinalsinha.com',
     install_requires = [pkg for pkg in open('requirements.txt').read().split('\n') if pkg],
     classifiers      = [
-        "Programming Language :: Python :: 3",
-        "Operating System :: Linux (Ubuntu)",
+        "Programming Language :: Python :: 3"
     ],
     long_description = open('README.md').read(),
     long_description_content_type = "text/markdown",
