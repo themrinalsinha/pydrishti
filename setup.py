@@ -5,19 +5,14 @@ setup(
     name             = 'pydrishti',
     author           = 'Mrinal Sinha',
     version          = '0.0.1',
-    zip_safe         = False,
-    liscense         = 'MIT',
     packages         = ['pydrishti'],
-    description      = 'Image process package',
+    description      = 'Image processing simplified',
     author_email     = 'mail@themrinalsinha.com',
-    install_requires = [
-        'dlib>=19.17.0',
-        'pyocr>=0.7.2',
-        'numpy>=1.17.0',
-        'Pillow>=6.1.0',
-        'imutils>=0.5.3',
-        'ipython>=7.7.0',
-        'matplotlib>=3.1.1',
-        'opencv-contrib-python>=4.1.0.25',
-    ],
+    install_requires = [pkg for pkg in open('requirements.txt').read().split('\n') if pkg],
+    classifiers      = [
+        "Programming Language :: Python :: 3",
+        "Operating System :: Linux (Ubuntu)",
+    ]
+    long_description = open('README.md').read(),
+    long_description_content_type = "text/markdown",
 )
