@@ -1,13 +1,13 @@
 from setuptools import setup
 
 setup(
-    url              = 'https://github.com/TheMrinalSinha/drishtie',
+    url              = 'https://github.com/TheMrinalSinha/drishti',
     name             = 'drishti',
     author           = 'Mrinal Sinha',
     version          = '0.1-alpha',
     zip_safe         = False,
     liscense         = 'MIT',
-    packages         = ['drishti'],
+    packages         = ['pydrishti'],
     description      = 'Image process package',
     author_email     = 'mail@themrinalsinha.com',
     install_requires = [
