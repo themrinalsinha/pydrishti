@@ -4,7 +4,7 @@ setup(
     url              = 'https://github.com/TheMrinalSinha/drishti',
     name             = 'pydrishti',
     author           = 'Mrinal Sinha',
-    version          = '0.0.1',
+    version          = '0.0-alpha',
     packages         = ['pydrishti'],
     description      = 'Image processing simplified',
     author_email     = 'mail@themrinalsinha.com',
