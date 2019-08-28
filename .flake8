@@ -1,0 +1,3 @@
+[flake8]
+select=F,W
+exclude=venv/,build/
